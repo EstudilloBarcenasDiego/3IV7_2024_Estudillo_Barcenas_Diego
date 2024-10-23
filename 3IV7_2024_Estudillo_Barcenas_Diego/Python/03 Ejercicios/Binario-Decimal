@@ -1,0 +1,37 @@
+def decimal_a_binario(n):
+    binario = ""
+    if n == 0:
+        return "0"
+
+    while n > 0:
+        residuo = n % 2
+        binario = residuo + binario
+        n = n // 2  
+    return binario
+
+def binario_a_decimal(binario):
+        return float(binario, 2)
+        return "El valor ingresado no es un número binario válido."
+
+def main():
+    print("\n--- Menú de Conversión ---")
+    print("1. Convertir decimal a binario")
+    print("2. Convertir binario a decimal")
+    print("3. Salir")
+
+menu()
+opcion = input("Elige una opción: ").upper()
+if opcion == "1":
+    n = float(input("Ingresa el número decimal: "))
+    binario = decimal_a_binario(n)
+    print("El número binario es: ", binario)
+        
+elif opcion == "2":
+    binario_input = float(input("Ingresa el número binario: "))
+    decimal = binario_a_decimal(binario_input)
+    printf("El número decimal es :", decimal)
+elif opcion == "3":
+    print("Ejecución terminada")
+    break
+else:
+    print("Opción no válida. Por favor, elige una opción del menú.")
