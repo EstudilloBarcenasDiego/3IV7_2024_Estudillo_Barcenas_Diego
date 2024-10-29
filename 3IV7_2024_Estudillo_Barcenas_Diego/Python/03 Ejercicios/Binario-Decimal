@@ -5,33 +5,42 @@ def decimal_a_binario(n):
 
     while n > 0:
         residuo = n % 2
-        binario = residuo + binario
+        binario = str(residuo) + binario
         n = n // 2  
     return binario
 
 def binario_a_decimal(binario):
-        return float(binario, 2)
+    try:
+        return int(binario, 2)
+    except ValueError:
         return "El valor ingresado no es un número binario válido."
 
 def main():
-    print("\n--- Menú de Conversión ---")
-    print("1. Convertir decimal a binario")
-    print("2. Convertir binario a decimal")
-    print("3. Salir")
+    while True:
+        print("\n--- Menú de Conversión ---")
+        print("1. Convertir decimal a binario")
+        print("2. Convertir binario a decimal")
+        print("3. Salir")
 
-menu()
-opcion = input("Elige una opción: ").upper()
-if opcion == "1":
-    n = float(input("Ingresa el número decimal: "))
-    binario = decimal_a_binario(n)
-    print("El número binario es: ", binario)
+        opcion = input("Elige una opción: ").strip()
+
+        if opcion == "1":
+            try:
+                n = int(input("Ingresa el número decimal: "))
+                binario = decimal_a_binario(n)
+                print("El número binario es:", binario)
+            except ValueError:
+                print("Por favor, ingresa un número entero válido.")
         
-elif opcion == "2":
-    binario_input = float(input("Ingresa el número binario: "))
-    decimal = binario_a_decimal(binario_input)
-    printf("El número decimal es :", decimal)
-elif opcion == "3":
-    print("Ejecución terminada")
-    break
-else:
-    print("Opción no válida. Por favor, elige una opción del menú.")
+        elif opcion == "2":
+            binario_input = input("Ingresa el número binario: ")
+            decimal = binario_a_decimal(binario_input)
+            print("El número decimal es:", decimal)
+        
+        elif opcion == "3":
+            print("Ejecución terminada")
+            break
+
+        else:
+            print("Opción no válida. Por favor, elige una opción del menú.")
+main()
