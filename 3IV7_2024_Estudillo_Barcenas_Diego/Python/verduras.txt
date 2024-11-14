@@ -1,30 +1,30 @@
-ajo,Allium sativum,blanco,6 meses,Amaryllidaceae,vitamina C, manganeso,China
-apio,Apium graveolens,verde,5 meses,Apiaceae,fibra, vitamina K,Espa�a
-acelga,Beta vulgaris,verde,2 meses,Amaranthaceae,vitamina A, calcio,Suiza
-berenjena,Solanum melongena,morado,3 meses,Solanaceae,fibra, potasio,India
-betabel,Beta vulgaris,rojo,4 meses,Amaranthaceae,hierro, �cido f�lico,Rusia
-br�coli,Brassica oleracea,verde,2 meses,Brassicaceae,vitamina C, fibra,China
-calabaza,Cucurbita pepo,naranja,4 meses,Cucurbitaceae,vitamina A, potasio,M�xico
-cebolla,Allium cepa,blanco,6 meses,Amaryllidaceae,fibra, vitamina C,Estados Unidos
-champi��n,Agaricus bisporus,blanco,1 mes,Agaricaceae,prote�na, vitamina B,Francia
-ch�charo,Pisum sativum,verde,3 meses,Fabaceae,prote�na, fibra,India
-col,Brassica oleracea,verde,2 meses,Brassicaceae,vitamina C, potasio,Rusia
-camote,Ipomoea batatas,naranja,4 meses,Convolvulaceae,carbohidratos, vitamina A,Estados Unidos
-coliflor,Brassica oleracea,blanco,2 meses,Brassicaceae,fibra, vitamina C,Italia
-esp�rrago,Asparagus officinalis,verde,2 a�os,Asparagaceae,fibra, �cido f�lico,Per�
-espinaca,Spinacia oleracea,verde,1 mes,Amaranthaceae,hierro, calcio,China
-habichuela,Phaseolus vulgaris,verde,3 meses,Fabaceae,prote�na, fibra,M�xico
-jitomate,Solanum lycopersicum,rojo,3 meses,Solanaceae,vitamina C, licopeno,M�xico
-lechuga,Lactuca sativa,verde,2 meses,Asteraceae,fibra, vitamina A,Espa�a
-elote,Zea mays,amarillo,3 meses,Poaceae,carbohidratos, fibra,Estados Unidos
-papa,Solanum tuberosum,caf�,3 meses,Solanaceae,carbohidratos, potasio,Per�
-pepino,Cucumis sativus,verde,2 meses,Cucurbitaceae,agua, vitamina K,China
-piment�n,Capsicum annuum,rojo,3 meses,Solanaceae,vitamina C, fibra,Espa�a
-r�bano,Raphanus sativus,rojo,1 mes,Brassicaceae,fibra, vitamina C,M�xico
-remolacha,Beta vulgaris,rojo,4 meses,Amaranthaceae,hierro, potasio,Rusia
-repollo,Brassica oleracea,verde,2 meses,Brassicaceae,vitamina C, fibra,China
-repollo morado,Brassica oleracea,morado,2 meses,Brassicaceae,fibra, vitamina C,Espa�a
-tomate,Solanum lycopersicum,rojo,3 meses,Solanaceae,vitamina C, potasio,Italia
-zanahoria,Daucus carota,naranja,4 meses,Apiaceae,vitamina A, fibra,Rusia
-nabo,Brassica rapa,blanco,2 meses,Brassicaceae,fibra, calcio,Jap�n
-nopal,Opuntia ficus-indica,verde,1 a�o,Cactaceae,fibra, vitamina C,M�xico
+ajo,Allium sativum,blanco,6 meses,Amaryllidaceae,vitamina C,China,200000
+apio,Apium graveolens,verde,5 meses,Apiaceae,fibra,Espana,150000
+acelga,Beta vulgaris,verde,2 meses,Amaranthaceae,vitamina A,Suiza,50000
+berenjena,Solanum melongena,morado,3 meses,Solanaceae,fibra,India,120000
+betabel,Beta vulgaris,rojo,4 meses,Amaranthaceae,hierro,Rusia,80000
+brocoli,Brassica oleracea,verde,2 meses,Brassicaceae,vitamina C,China,100000
+calabaza,Cucurbita pepo,naranja,4 meses,Cucurbitaceae,vitamina A,Mexico,130000
+cebolla,Allium cepa,blanco,6 meses,Amaryllidaceae,fibra,Estados Unidos,180000
+champinon,Agaricus bisporus,blanco,1 mes,Agaricaceae,proteina,Francia,30000
+chicharo,Pisum sativum,verde,3 meses,Fabaceae,proteina,India,70000
+col,Brassica oleracea,verde,2 meses,Brassicaceae,vitamina C,Rusia,110000
+camote,Ipomoea batatas,naranja,4 meses,Convolvulaceae,carbohidratos,Estados Unidos,160000
+coliflor,Brassica oleracea,blanco,2 meses,Brassicaceae,fibra,Italia,90000
+esparrago,Asparagus officinalis,verde,2 anos,Asparagaceae,fibra,Peru,45000
+espinaca,Spinacia oleracea,verde,1 mes,Amaranthaceae,hierro,China,50000
+habichuela,Phaseolus vulgaris,verde,3 meses,Fabaceae,proteina,Mexico,75000
+jitomate,Solanum lycopersicum,rojo,3 meses,Solanaceae,vitamina C,Mexico,250000
+lechuga,Lactuca sativa,verde,2 meses,Asteraceae,fibra,Espana,60000
+elote,Zea mays,amarillo,3 meses,Poaceae,carbohidratos,Estados Unidos,200000
+papa,Solanum tuberosum,cafe,3 meses,Solanaceae,carbohidratos,Peru,300000
+pepino,Cucumis sativus,verde,2 meses,Cucurbitaceae,agua,China,100000
+pimenton,Capsicum annuum,rojo,3 meses,Solanaceae,vitamina C,Espana,50000
+rabano,Raphanus sativus,rojo,1 mes,Brassicaceae,fibra,Mexico,25000
+remolacha,Beta vulgaris,rojo,4 meses,Amaranthaceae,hierro,Rusia,30000
+repollo,Brassica oleracea,verde,2 meses,Brassicaceae,vitamina C,China,70000
+repollo morado,Brassica oleracea,morado,2 meses,Brassicaceae,fibra,Espana,60000
+tomate,Solanum lycopersicum,rojo,3 meses,Solanaceae,vitamina C,Italia,150000
+zanahoria,Daucus carota,naranja,4 meses,Apiaceae,vitamina A,Rusia,95000
+nabo,Brassica rapa,blanco,2 meses,Brassicaceae,fibra,Japon,30000
+nopal,Opuntia ficus-indica,verde,1 ano,Cactaceae,fibra,Mexico,40000
