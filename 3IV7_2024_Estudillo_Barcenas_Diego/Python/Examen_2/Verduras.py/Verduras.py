@@ -201,6 +201,4 @@ def menu():
 def salir():
     messagebox.showinfo("Salida", "Hasta la próxima :3")
     root.destroy()
-
-
 menu()

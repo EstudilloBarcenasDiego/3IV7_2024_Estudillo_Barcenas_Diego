@@ -1,0 +1,143 @@
+import tkinter as tk
+from tkinter import messagebox
+import time
+
+# Métodos de ordenamiento
+def quick_sort(lista):
+    if len(lista) <= 1:
+        return lista
+    pivote = lista[len(lista) // 2]
+    izquierda = [x for x in lista if x < pivote]
+    medio = [x for x in lista if x == pivote]
+    derecha = [x for x in lista if x > pivote]
+    return quick_sort(izquierda) + medio + quick_sort(derecha)
+
+def burbuja(lista):
+    n = len(lista)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if lista[j] > lista[j + 1]:
+                lista[j], lista[j + 1] = lista[j + 1], lista[j]
+    return lista
+
+def seleccion_sort(lista):
+    n = len(lista)
+    for i in range(n):
+        min_idx = i
+        for j in range(i + 1, n):
+            if lista[j] < lista[min_idx]:
+                min_idx = j
+        lista[i], lista[min_idx] = lista[min_idx], lista[i]
+    return lista
+
+def insercion(lista):
+    for i in range(1, len(lista)):
+        key = lista[i]
+        j = i - 1
+        while j >= 0 and key < lista[j]:
+            lista[j + 1] = lista[j]
+            j -= 1
+        lista[j + 1] = key
+    return lista
+
+def merge_sort(lista):
+    if len(lista) > 1:
+        mid = len(lista) // 2
+        izquierda = lista[:mid]
+        derecha = lista[mid:]
+
+        merge_sort(izquierda)
+        merge_sort(derecha)
+
+        i = j = k = 0
+        while i < len(izquierda) and j < len(derecha):
+            if izquierda[i] < derecha[j]:
+                lista[k] = izquierda[i]
+                i += 1
+            else:
+                lista[k] = derecha[j]
+                j += 1
+            k += 1
+
+        while i < len(izquierda):
+            lista[k] = izquierda[i]
+            i += 1
+            k += 1
+
+        while j < len(derecha):
+            lista[k] = derecha[j]
+            j += 1
+            k += 1
+    return lista
+
+# Ventana para ingresar y ordenar con un método seleccionado
+def abrir_ventana_ordenamiento(metodo, nombre_metodo):
+    def ordenar_lista():
+        entrada = entry.get()
+        try:
+            lista_original = list(map(int, entrada.split(',')))
+
+            if len(lista_original) > 40:
+                messagebox.showerror("Error", "La lista no puede contener más de 40 números.")
+                return
+
+            inicio = time.time()
+            lista_ordenada = metodo(lista_original)
+            fin = time.time()
+
+            tiempo = fin - inicio
+            resultado_original.config(text=f"Lista Original: {lista_original}", fg="blue")
+            resultado_ordenada.config(text=f"Lista Ordenada: {lista_ordenada}", fg="green")
+            resultado_tiempo.config(text=f"Tiempo de Ordenamiento: {tiempo:.6f} segundos", fg="red")
+        except ValueError:
+            messagebox.showerror("Error", "Por favor, ingrese una lista válida de números separados por comas.")
+
+    nueva_ventana = tk.Toplevel(ventana)
+    nueva_ventana.title(f"Ordenamiento - {nombre_metodo}")
+    nueva_ventana.geometry("500x400")
+    nueva_ventana.configure(bg="#f0f8ff")
+
+    label = tk.Label(nueva_ventana, text="Ingrese una lista de números separados por comas (máximo 40):", bg="#f0f8ff")
+    label.pack(pady=10)
+    entry = tk.Entry(nueva_ventana, width=50)
+    entry.pack(pady=5)
+
+    boton_ordenar = tk.Button(nueva_ventana, text="Ordenar", bg="#4682b4", fg="white", command=ordenar_lista)
+    boton_ordenar.pack(pady=10)
+
+    resultado_original = tk.Label(nueva_ventana, text="Lista Original: ", bg="#f0f8ff")
+    resultado_original.pack(pady=5)
+    resultado_ordenada = tk.Label(nueva_ventana, text="Lista Ordenada: ", bg="#f0f8ff")
+    resultado_ordenada.pack(pady=5)
+    resultado_tiempo = tk.Label(nueva_ventana, text="Tiempo de Ordenamiento: ", bg="#f0f8ff")
+    resultado_tiempo.pack(pady=5)
+
+# Crear la ventana principal
+ventana = tk.Tk()
+ventana.title("Métodos de Ordenamiento")
+ventana.geometry("400x400")
+ventana.configure(bg="#87ceeb")
+
+# Menú principal
+menu_principal = tk.Menu(ventana)
+ventana.config(menu=menu_principal)
+
+menu_ordenamiento = tk.Menu(menu_principal, tearoff=0)
+menu_ordenamiento.add_command(label="Quick Sort", command=lambda: abrir_ventana_ordenamiento(quick_sort, "Quick Sort"))
+menu_ordenamiento.add_command(label="Burbuja", command=lambda: abrir_ventana_ordenamiento(burbuja, "Burbuja"))
+menu_ordenamiento.add_command(label="Selección", command=lambda: abrir_ventana_ordenamiento(seleccion_sort, "Selección"))
+menu_ordenamiento.add_command(label="Inserción", command=lambda: abrir_ventana_ordenamiento(insercion, "Inserción"))
+menu_ordenamiento.add_command(label="Merge Sort", command=lambda: abrir_ventana_ordenamiento(merge_sort, "Merge Sort"))
+menu_principal.add_cascade(label="Métodos de Ordenamiento", menu=menu_ordenamiento)
+
+# Botones en la ventana principal
+label_bienvenida = tk.Label(ventana, text="Seleccione un método de ordenamiento", bg="#87ceeb", fg="white", font=("Helvetica", 14))
+label_bienvenida.pack(pady=10)
+
+tk.Button(ventana, text="Quick Sort", command=lambda: abrir_ventana_ordenamiento(quick_sort, "Quick Sort"), bg="#4682b4", fg="white").pack(pady=5)
+tk.Button(ventana, text="Burbuja", command=lambda: abrir_ventana_ordenamiento(burbuja, "Burbuja"), bg="#4682b4", fg="white").pack(pady=5)
+tk.Button(ventana, text="Selección", command=lambda: abrir_ventana_ordenamiento(seleccion_sort, "Selección"), bg="#4682b4", fg="white").pack(pady=5)
+tk.Button(ventana, text="Inserción", command=lambda: abrir_ventana_ordenamiento(insercion, "Inserción"), bg="#4682b4", fg="white").pack(pady=5)
+tk.Button(ventana, text="Merge Sort", command=lambda: abrir_ventana_ordenamiento(merge_sort, "Merge Sort"), bg="#4682b4", fg="white").pack(pady=5)
+
+ventana.mainloop()
